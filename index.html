@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prashant Nagre | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#4cd7f6",
+                        "surface-variant": "#353437",
+                        "on-tertiary-container": "#002f38",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313032",
+                        "on-tertiary": "#003640",
+                        "primary-container": "#4a8eff",
+                        "outline": "#8b90a0",
+                        "surface": "#131315",
+                        "surface-container-high": "#2a2a2c",
+                        "on-primary-fixed": "#001a41",
+                        "on-background": "#e5e1e4",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-dim": "#131315",
+                        "surface-container-highest": "#353437",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary-container": "#00285b",
+                        "surface-container": "#201f21",
+                        "on-secondary": "#490080",
+                        "outline-variant": "#414754",
+                        "primary-fixed-dim": "#adc7ff",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-tertiary-fixed": "#001f26",
+                        "secondary-fixed": "#f0dbff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "primary-fixed": "#d8e2ff",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#004493",
+                        "primary": "#adc7ff",
+                        "surface-bright": "#39393b",
+                        "on-secondary-container": "#d6a9ff",
+                        "background": "#131315",
+                        "inverse-primary": "#005bc0",
+                        "on-primary": "#002e68",
+                        "surface-tint": "#adc7ff",
+                        "secondary": "#ddb7ff",
+                        "surface-container-low": "#1c1b1d",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "inverse-surface": "#e5e1e4",
+                        "secondary-container": "#6f00be",
+                        "on-surface-variant": "#c1c6d7",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "surface-container-lowest": "#0e0e10",
+                        "tertiary-container": "#009eb9",
+                        "on-surface": "#e5e1e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-gap": "16px",
+                        "section-padding-desktop": "120px",
+                        "unit": "4px",
+                        "container-max": "1200px",
+                        "section-padding-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "code-snippet": ["Geist"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-md": ["Sora"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "code-snippet": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131315;
+            color: #e5e1e4;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-primary {
+            box-shadow: 0 0 40px rgba(74, 142, 255, 0.15);
+        }
+        .glow-accent {
+            box-shadow: 0 0 30px rgba(76, 215, 246, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .section-anchor {
+            scroll-margin-top: 80px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_40px_rgba(74,142,255,0.15)]">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-gutter py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="font-display-lg text-headline-md tracking-tighter text-on-surface">Prashant Nagre</span>
+</div>
+<a class="px-5 py-2 rounded-full bg-primary text-on-primary font-display-lg text-label-sm uppercase tracking-wider active:scale-95 transition-all" href="#contact">Contact</a>
+</div>
+</nav>
+<!-- Mobile Sidebar (Drawer Placeholder Simulation) -->
+<div class="hidden fixed inset-y-0 left-0 z-[60] w-72 bg-surface-container-high/95 backdrop-blur-2xl border-r border-white/10 rounded-r-xl shadow-2xl" id="mobile-drawer">
+<div class="p-6">
+<h2 class="font-display-lg text-headline-md text-primary mb-8">Navigation</h2>
+<ul class="space-y-4">
+<li class="bg-primary-container text-on-primary-container rounded-lg px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined">home</span> Home
+                </li>
+<li class="text-on-surface-variant hover:text-on-surface px-4 py-3 flex items-center gap-3 transition-all duration-200">
+<span class="material-symbols-outlined">person</span> About
+                </li>
+<!-- Additional items hidden for mobile brevity as per UI context -->
+</ul>
+</div>
+</div>
+<main class="relative">
+<!-- Background Atmosphere -->
+
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-padding-mobile px-gutter overflow-hidden" id="home">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-block px-3 py-1 rounded bg-white/5 border border-white/10 font-label-sm text-tertiary uppercase tracking-widest">Available for Hire</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg">
+                        Prashant Nagre
+                    </h1>
+<p class="font-headline-md text-headline-md text-primary">
+                        Computer Science Undergraduate | Aspiring Software Developer
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Passionate about Full-Stack Development, Automation, and AI-driven solutions to solve real-world complexities.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-3 rounded-full bg-gradient-to-r from-[#4a8eff] to-[#4cd7f6] text-on-primary font-display-lg font-bold glow-primary transition-transform active:scale-95" href="#projects">View Projects</a>
+<a class="px-8 py-3 rounded-full glass-card text-on-surface font-display-lg font-bold border-white/20 transition-all hover:bg-white/10" href="#contact">Contact Me</a>
+</div>
+</div>
+<!-- Hero Visual Panel -->
+<div class="relative flex justify-center items-center h-80 md:h-[500px]">
+<div class="glass-card p-6 w-full max-w-sm rounded-2xl relative overflow-hidden glow-primary transform rotate-2">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full"></div>
+<div class="flex justify-between items-center mb-6">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-green-500"></div>
+</div>
+<span class="font-code-snippet text-on-surface-variant text-xs">index.js</span>
+</div>
+<div class="space-y-3 font-code-snippet text-primary text-sm">
+<p class="text-tertiary">const dev = {</p>
+<p class="pl-4">name: <span class="text-on-surface">"Prashant Nagre"</span>,</p>
+<p class="pl-4">role: <span class="text-on-surface">"Software Engineer"</span>,</p>
+<p class="pl-4">passion: <span class="text-on-surface">"Automation &amp; AI"</span>,</p>
+<p class="pl-4">location: <span class="text-on-surface">"India"</span></p>
+<p class="text-tertiary">};</p>
+</div>
+<div class="mt-8 pt-6 border-t border-white/10 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-primary/50">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a confident young Indian male computer science student with a clean-cut look, wearing a dark navy smart-casual shirt. The background is a blurred high-tech workspace with soft blue and cyan ambient lighting, mirroring the portfolio's glassmorphism and electric blue theme. The mood is ambitious, professional, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWLHLvIKKlUipGDBb164QtH565r31guBpDKQIbTaefEtxaz6xvxQbr8joGxU5Lhxyc-QgH3sETc8DZceYM-TFTkXLV8MsjtB3q7PJiY2Gn8lXyKhkOROn0pfjIuWIEqPYFfyjoeWn4hhpjkwY680jSBV96AGJYqLrl8t3UIZaXOWbtF1cQkshWmHrIh_3Jhwxp9RFUZ-XicJbj12v9Fpo9IP13xw9npd4GZv5q2EtivlATz0jjDhU8WQ"/>
+</div>
+<div>
+<p class="font-display-lg text-sm text-on-surface">Ready to build</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-tighter">Verified Engineer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter" id="about">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/2 space-y-6">
+<h2 class="font-display-lg text-display-lg-mobile text-primary">About Me</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            I am a dedicated Computer Science Undergraduate with a strong foundation in full-stack development and automation. My journey is driven by a deep curiosity about how software can simplify lives and optimize complex systems. I thrive in collaborative environments and am always eager to learn and implement emerging technologies.
+                        </p>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-xl hover:translate-y-[-4px] transition-all duration-300">
+<span class="material-symbols-outlined text-tertiary mb-3 text-3xl">layers</span>
+<h3 class="font-headline-md text-sm mb-1">Full-Stack Development</h3>
+<p class="text-label-sm text-on-surface-variant">Scalable web solutions</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:translate-y-[-4px] transition-all duration-300">
+<span class="material-symbols-outlined text-tertiary mb-3 text-3xl">settings_suggest</span>
+<h3 class="font-headline-md text-sm mb-1">Automation Mindset</h3>
+<p class="text-label-sm text-on-surface-variant">Efficiency first</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:translate-y-[-4px] transition-all duration-300">
+<span class="material-symbols-outlined text-tertiary mb-3 text-3xl">psychology</span>
+<h3 class="font-headline-md text-sm mb-1">Problem Solver</h3>
+<p class="text-label-sm text-on-surface-variant">Logic-driven approach</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:translate-y-[-4px] transition-all duration-300">
+<span class="material-symbols-outlined text-tertiary mb-3 text-3xl">auto_stories</span>
+<h3 class="font-headline-md text-sm mb-1">Continuous Learner</h3>
+<p class="text-label-sm text-on-surface-variant">Evolving with tech</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter bg-surface-container-low/30" id="education">
+<div class="max-w-[1200px] mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-12 text-center">Education</h2>
+<div class="relative max-w-2xl mx-auto pl-8 border-l border-primary/30 space-y-12">
+<!-- Item 1 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-surface"></div>
+<div class="glass-card p-6 rounded-xl">
+<span class="font-label-sm text-primary uppercase">2023 - 2027</span>
+<h3 class="font-headline-md text-on-surface mt-2">Rajarambapu Institute of Technology</h3>
+<p class="font-body-md text-on-surface-variant">Bachelor of Technology (B.Tech) in Computer Science</p>
+<div class="mt-4 px-3 py-1 bg-primary/10 rounded border border-primary/20 inline-block font-label-sm text-primary">CGPA: 7.17</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative">
+<div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-tertiary border-4 border-surface"></div>
+<div class="glass-card p-6 rounded-xl">
+<span class="font-label-sm text-tertiary uppercase">2022</span>
+<h3 class="font-headline-md text-on-surface mt-2">Priyadarshini Junior College</h3>
+<p class="font-body-md text-on-surface-variant">Higher Secondary Certificate (HSC)</p>
+<div class="mt-4 px-3 py-1 bg-tertiary/10 rounded border border-tertiary/20 inline-block font-label-sm text-tertiary">Percentage: 86.17%</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter" id="skills">
+<div class="max-w-[1200px] mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-12">Technical Mastery</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Technical Skills -->
+<div class="glass-card p-8 rounded-2xl glow-accent">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary">code</span>
+<h3 class="font-headline-md text-on-surface">Core Technologies</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">C</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">Java</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">HTML5</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">CSS3</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">React.js</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">Node.js</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">MySQL</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">MongoDB</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">Git</span>
+<span class="px-3 py-1.5 bg-white/5 rounded-lg text-label-sm font-code-snippet border border-white/5 hover:border-tertiary transition-colors">GitHub</span>
+</div>
+</div>
+<!-- Soft Skills -->
+<div class="glass-card p-8 rounded-2xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">groups</span>
+<h3 class="font-headline-md text-on-surface">Soft Skills</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Communication
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Leadership
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Problem Solving
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Analytical Thinking
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Decision Making
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter bg-surface-container-lowest" id="projects">
+<div class="max-w-[1200px] mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-12 text-center">Featured Work</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group glass-card rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic, sleek food delivery application dashboard interface displayed on a tablet. The screen shows a vibrant 'BreakFast4U' logo, categorized food icons, and a secure user login portal with Role-Based Access Control visuals. The design follows a modern glassmorphism aesthetic with soft blue glowing borders and minimalist typography in a dark room environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfnXXIBrUV06mOzUnsAPq8ZYVdd74MqLF0MwbsrZhNxHqO3JsgUzdQKbyfGpcwDD0SgYr5QUHV42-PIDTmyBG5KBGwMclE4bsd2jG3Nss3UiZBKAUpN58rIfFFRObULxG6NHAx_JnE2xsGWAOlKfRJqzq5r9JqQStgY-oqn7iT72Ky5xw-HJyYGxKZUejamxBL4NjSODJY4c8kwJ4FH10wnh-mKhUN_hWLPw2MX1Nv-m3Au-vYBIo80A')"></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity"></div>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-primary">React</span>
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-primary">Node.js</span>
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-primary">Express</span>
+</div>
+<h3 class="font-display-lg text-headline-md mb-4 text-on-surface">BreakFast4U</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+                                A comprehensive full-stack application featuring robust Role-Based Access Control (RBAC), optimizing order flow and user management.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary font-display-lg text-sm hover:underline" href="#">
+                                Explore Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group glass-card rounded-2xl overflow-hidden hover:border-tertiary/40 transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A close-up shot of a high-tech agricultural prototype: a domestic grain dryer. The machine features an Arduino circuit board with glowing LEDs, wired humidity and temperature sensors, and a sleek brushed metal heating chamber. The lighting is focused and dramatic, highlighting the engineering precision and the clean, industrial design language." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5paOpuYRj-G3DJ4fHVTMR4OTHGHeP3zr0zKzOEsfo5Kz-0sc5nh3SkJR0bkJepaC8-Fbg2TS0ggn2Lp80u41-yKm3btz6i32geRKaJxCZ6Do8eplMcP1MsOIwGNdPuvd6PK_uDk_rayZ5j4VuViRWJP7nWK2dquVt3KnybitDkbDwANoGAh67bL29_Bdtew1h3f5Uno42z4fcWMvPwwxUA3ktiW292S8riMQKLlsS3zmao1mm7XTY-g')"></div>
+<div class="absolute inset-0 bg-tertiary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity"></div>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-tertiary">Arduino</span>
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-tertiary">Sensors</span>
+<span class="px-2 py-0.5 bg-white/5 text-[10px] uppercase font-label-sm rounded tracking-widest text-tertiary">Automation</span>
+</div>
+<h3 class="font-display-lg text-headline-md mb-4 text-on-surface">Domestic Grain Dryer</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+                                An IoT-driven prototype utilizing humidity and temperature sensors with Arduino for efficient, localized agricultural grain preservation.
+                            </p>
+<a class="inline-flex items-center gap-2 text-tertiary font-display-lg text-sm hover:underline" href="#">
+                                Explore Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter" id="achievements">
+<div class="max-w-[1200px] mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-12">Achievements</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card p-6 rounded-xl border-l-4 border-l-primary flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">article</span>
+<h3 class="font-headline-md text-lg mb-2">AI Conference Paper</h3>
+<p class="text-body-md text-on-surface-variant text-sm">Published a research paper on AI implementation in Washing Machines.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-l-tertiary flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary mb-4 text-3xl">emoji_events</span>
+<h3 class="font-headline-md text-lg mb-2">Ranked 7th | IIT Bombay</h3>
+<p class="text-body-md text-on-surface-variant text-sm">Secured 7th Rank in the National Entrepreneurship Challenge by IIT Bombay.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-l-secondary flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary mb-4 text-3xl">verified_user</span>
+<h3 class="font-headline-md text-lg mb-2">DBMS Certification</h3>
+<p class="text-body-md text-on-surface-variant text-sm">Successfully completed the NPTEL Database Management Systems certification.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section-anchor py-section-padding-mobile px-gutter" id="contact">
+<div class="max-w-[1200px] mx-auto">
+<div class="glass-card p-8 md:p-12 rounded-3xl glow-primary">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-8">
+<h2 class="font-display-lg text-display-lg-mobile leading-tight">Let's Build Something <span class="text-primary">Meaningful</span></h2>
+<p class="font-body-lg text-on-surface-variant">Whether you have a question or just want to discuss a potential project, feel free to reach out.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary">mail</span>
+</div>
+<span class="font-body-md">nagreprashant2105@gmail.com</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary">call</span>
+</div>
+<span class="font-body-md">+91 8087195961</span>
+</div>
+</div>
+</div>
+<form class="space-y-6">
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase">Name</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-white/10 focus:border-primary focus:ring-0 transition-all font-body-md py-3 text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase">Email</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-white/10 focus:border-primary focus:ring-0 transition-all font-body-md py-3 text-on-surface" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b-2 border-white/10 focus:border-primary focus:ring-0 transition-all font-body-md py-3 text-on-surface" placeholder="Your vision..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 rounded-xl bg-primary text-on-primary font-display-lg font-bold uppercase tracking-widest hover:brightness-110 active:scale-[0.98] transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-padding-desktop border-t border-white/10 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center py-stack-gap px-gutter max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0">
+<span class="font-display-lg text-headline-md text-on-surface">Prashant Nagre</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Prashant Nagre. Built with Precision.
+            </p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="text-on-surface-variant hover:text-tertiary hover:translate-y-[-2px] transition-all duration-300" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-tertiary hover:translate-y-[-2px] transition-all duration-300" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-tertiary hover:translate-y-[-2px] transition-all duration-300" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-tertiary hover:translate-y-[-2px] transition-all duration-300" href="mailto:nagreprashant2105@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer: Smooth Scroll & Nav Highlight -->
+<script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
